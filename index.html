@@ -223,7 +223,15 @@
       border: 3px solid var(--navy);
       margin: 0 auto 20px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 2rem;
+      position: relative;
+      font-size: 0;
+      line-height: 1;
+    }
+    .hero-card-avatar::before {
+      content: '🌻';
+      font-family: 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;
+      font-size: 1.8rem;
+      line-height: 1;
     }
     .hero-card-name {
       text-align: center;
@@ -264,8 +272,17 @@
       background: var(--mint); border: 2px solid var(--navy);
       border-radius: 50%; width: 56px; height: 56px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.4rem;
+      font-size: 0;
+      line-height: 1;
       box-shadow: 3px 3px 0 var(--navy);
+      color: transparent;
+    }
+    .hero-badge::before {
+      content: '🌻';
+      font-family: 'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;
+      font-size: 1.15rem;
+      line-height: 1;
+      color: var(--navy);
     }
 
     /* ── ABOUT ── */
@@ -285,13 +302,16 @@
     }
     .about-illo-circle {
       width: 220px; height: 220px;
+      aspect-ratio: 1 / 1;
       border-radius: 50%;
-      background: linear-gradient(145deg, var(--yellow) 0%, var(--mint) 100%);
       border: 3px solid var(--navy);
       margin: 0 auto;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 5rem;
+      display: block;
+      object-fit: cover;
+      object-position: center 18%;
       box-shadow: 6px 6px 0 var(--navy);
+      overflow: hidden;
+      background: linear-gradient(145deg, var(--yellow) 0%, var(--mint) 100%);
     }
     .about-float {
       position: absolute;
@@ -706,7 +726,7 @@
       <div class="hero-visual">
         <div class="hero-card">
           <div class="hero-badge">☀️</div>
-          <div class="hero-card-avatar">🌱</div>
+          <div class="hero-card-avatar">�</div>
           <div class="hero-card-name">何珮琳 Pei Lin</div>
           <div class="hero-card-role">CNC 職涯導航諮詢師</div>
           <div class="hero-card-tags">
@@ -741,7 +761,7 @@
     <div class="about-inner">
       <div class="about-illo fade-up">
         <div class="about-illo-wrap">
-          <div class="about-illo-circle">🌻</div>
+          <img class="about-illo-circle" src="IMG_9532.JPG" alt="何珮琳照片" />
           <div class="about-float about-float-1">🔍 內在盤點工具</div>
           <div class="about-float about-float-2">✨ 從迷茫到清晰</div>
         </div>
@@ -1017,7 +1037,7 @@
           從第一封訊息開始，我就會認真回覆。<br>
           不用準備很多，帶著你的困惑就來 ☀️
         </div>
-        <a href="mailto:barbiepei88@gmail.com?subject=職涯諮詢預約" class="btn-dark">傳訊給珮琳 →</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScX0JJlBRp9H5WiTGvD0yJxBHKpTe6jOTUgtT8NDjnFF9YCOw/viewform" class="btn-dark" target="_blank" rel="noopener noreferrer">點擊預約 / 了解職涯諮詢 →</a>
       </div>
 
       <div class="fade-up">
